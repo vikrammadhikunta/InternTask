@@ -1,16 +1,98 @@
-# React + Vite
+# LakeRider - Boating Experience Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Project Overview
+LakeRider is a React-based web application for booking premium boat rides across Andhra Pradesh and Telangana. The platform features a modern booking system with traveler management, package selection, and integrated safety technology through partnership with Alert24.
 
-Currently, two official plugins are available:
+**HLD Design & Page Layout:** For detailed High-Level Design diagrams and page layouts, view the [Figma design board](https://www.figma.com/board/Y3HADvatVgCsJVJAFTOlgi/Alert.24?node-id=2-731&t=J4hzb1VxP4UqD6g5-1).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Quick Start
+```bash
+git clone https://github.com/vikrammadhikunta/InternTask.git
 
-## React Compiler
+cd InternTask
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+npm install # Or  npm i
+```
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Dependencies
+```bash
+npm install react react-dom react-router-dom react-hot-toast remixicon
+npm install -D tailwindcss @tailwindcss/cli
+```
+
+## 📁 Project Structure
+```bash
+src/
+├── components/
+│   ├── BoatRideCard.jsx    
+│   ├── BookingModal.jsx   
+│   └── Header.jsx          
+├── pages/
+│   ├── HomePage.jsx       
+│   ├── AboutPage.jsx       
+│   └── ContactPage.jsx     
+├── App.jsx                 
+├── main.jsx                
+└── index.css              
+```
+
+## ✨ Features
+
+### 🎯 Booking System
+- **Multi-step modal**: Date selection → Payment summary
+- **Traveler management**: Add/edit up to 10 travelers
+- **Real-time validation**: Phone (10 digits), names (100 chars max)
+- **Package options**: Recommended (with life jacket) or Budget Saver
+
+### 💰 Pricing & Discounts
+- **Ticket Price**: ₹900-₹1100 per person
+- **Life Jacket**: ₹100/person (Recommended package only)
+- **GST**: 18% on ticket price
+- **Discounts**:
+  - `NEW10`: ₹100 off (min 2 travelers)
+  - `NEW20`: ₹200 off (min 5 travelers)
+
+### 🎨 UI/UX
+- Responsive design (mobile-first)
+- Toast notifications
+- Clean, intuitive booking flow
+- Safety-first messaging
+
+## ⚡ Tech Stack
+- **Frontend**: React 18+, Tailwind CSS
+- **Routing**: React Router DOM
+- **Icons**: Remixicons
+- **Notifications**: React Hot Toast
+
+## 🛠️ Key Components
+
+### `BookingModal.jsx` (Core Booking Logic)
+- 2-step booking flow
+- Traveler CRUD operations
+- Promo code validation
+- Real-time price calculation
+
+### `BoatRideCard.jsx`
+- Ride display cards
+- Image + details + pricing
+- "Book Now" trigger
+
+## 📱 Responsive Design
+- Mobile-friendly navigation
+- Adaptive grid layouts
+- Touch-friendly buttons
+- Modal optimization for all screens
+
+## 🔒 Validation Rules
+- **Phone**: 10 digits, numbers only
+- **Names**: Max 100 characters
+- **Date**: Future dates only
+- **Travelers**: Min 1 required
+
+## 🚀 Running the App
+1. Install dependencies: `npm install`
+2. Start dev server: `npm run dev`
+3. Open: `http://localhost:5173`
+
+
